@@ -1,0 +1,70 @@
+ Below is the line by line explaination of the code for a yt video downloader :-
+ 
+ 
+        <<< import yt_dlp >>>
+           
+           What it does: This imports the yt_dlp library, which is used for downloading videos from YouTube and other platforms.
+           
+           Why it's needed: yt_dlp provides powerful features to handle video downloads, including choosing formats, extracting metadata, and downloading videos.
+
+
+        <<< def download_youtube_video(video_url): >>>
+           
+           What it does: This defines a function called download_youtube_video that accepts a single parameter, video_url, which is the URL of the YouTube video to be downloaded.
+           
+           Why it's needed: Encapsulating the download logic in a function makes the code reusable and easier to maintain.
+
+
+        <<< try: >>>
+           
+           What it does: Starts a try block to catch and handle any errors that might occur during the download process.
+           
+           Why it's needed: Ensures that the program doesn't crash if something goes wrong, like an invalid URL or network issue.
+
+
+        <<< ydl_opts = {
+           
+            'format': 'best',  # Downloads the best combined audio and video stream
+            'outtmpl': '%(title)s.%(ext)s',  # Save with the video title as filename
+        } >>>
+          
+           What it does:  Defines a dictionary called ydl_opts that holds options for configuring yt-dlp.
+          
+           'format': 'best': Downloads the best single stream available that combines video and audio.
+          
+           'outtmpl': '%(title)s.%(ext)s': Specifies the output filename. % placeholders automatically insert the video title and appropriate file extension.
+          
+           Why it's needed: These options control how the video is downloaded and save
+
+
+
+        <<< with yt_dlp.YoutubeDL(ydl_opts) as ydl: >>>
+
+           What it does: Creates an instance of the yt_dlp.YoutubeDL class using the options defined in ydl_opts. The with statement ensures proper cleanup after the download completes.
+
+           Why it's needed: The YoutubeDL instance is the core interface for managing downloads and processing the video data.
+
+
+
+        <<< info_dict = ydl.extract_info(video_url, download=True) >>>
+
+           What it does:  Calls the extract_info method on the YoutubeDL instance ydl.
+
+           video_url: The YouTube video URL to process.
+
+           download=True: Downloads the video after extracting its metadata.
+
+           Returns an info_dict, a dictionary containing metadata about the video (e.g., title, duration, uploader).
+
+           Why it's needed: Handles both downloading and metadata extraction in one step.
+
+
+
+        <<< print(f"Download completed: {info_dict['title']}") >>>
+
+           What it does:   Prints a success
+
+
+
+
+
