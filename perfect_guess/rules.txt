@@ -1,0 +1,22 @@
+Objective:
+
+Your goal is to guess the number I have randomly chosen between 1 and 100.
+
+Rules:
+
+You have 3 attempts to guess the correct number.
+After each guess, I will tell you if your guess is too high or too low.
+If you guess correctly within 3 attempts, you win!
+If you donott guess the number in 3 tries, I will reveal the correct number, and the game will end.
+
+How to Play:
+
+Step 1: Think of a number between 1 and 100 and tell me your first guess.
+Step 2: I will give you feedback (too high, too low, or correct).
+Step 3: Based on my feedback, adjust your guess and try again.
+Step 4: Keep going until you either guess the number correctly or run out of attempts.
+
+End of Game:
+
+If you guess correctly, I will celebrate your win!
+If you donot guess the number, I will reveal it and encourage you to try again.
